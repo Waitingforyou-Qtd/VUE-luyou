@@ -67,6 +67,7 @@
     window.onhashchange = function () {
       // 通过 location.hash 获取到最新的 hash 值
       console.log(location.hash);
+      // 截取字符串
       switch (location.hash.slice(1)) {
         case '/zhuye':
           vm.comName = 'zhuye'
