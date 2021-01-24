@@ -31,7 +31,7 @@
           <h1>Register 组件</h1>
           <hr/>
 
-          <!-- 子路由链接 -->
+          <!-- 子路由链接 分别为tab1 tab2 -->
           <router-link to="/register/tab1">tab1</router-link>
           <router-link to="/register/tab2">tab2</router-link>
 
@@ -40,7 +40,7 @@
           <router-view ><router-view />
         </div>`
         }
-
+        // 创建2个子组件
         const Tab1 = {
             template: '<h3>Tab1 子组件</h3>'
         }
@@ -60,10 +60,10 @@
                     path: '/user',
                     component: User
                 },
-                // children 数组表示子路由规则
                 {
                     path: '/register',
                     component: Register,
+                // TODO:这里的children 数组表示子路由规则
                     children: [{
                             path: 'tab1',
                             component: Tab1
