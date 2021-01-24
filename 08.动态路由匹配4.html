@@ -28,7 +28,7 @@
   <script>
     const User = {
       props: ['id', 'uname', 'age', 'tel'],
-      template: '<h1>User 组件 -- 用户id为: {{id}} -- 姓名为:{{uname}} -- 年龄为：{{age}}-- 电话为：{{tel}}</h1>'
+      template: '<h1>User 组件 -- 用户ID为: {{id}} -- 姓名为: {{uname}} -- 年龄为：{{age}}-- 电话为：{{tel}}</h1>'
     }
 
     const Register = {
@@ -47,7 +47,7 @@
           component: User,
           // TODO:如果想要获取传递的参数值还想要获取传递的对象数据，那么 props 应该设置为函数形式
           props: route => ({
-            uname: 'xxx',
+            uname: 'zx',
             age: 20,
             tel: 666666,
             id: route.params.id
