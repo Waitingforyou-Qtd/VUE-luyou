@@ -22,7 +22,6 @@
     <!-- 路由占位符 -->
     <router-view></router-view>
   </div>
-
   <script>
     const User = {
       // TODO: 将 props 设置为对象，那么就直接将对象的数据传递给组件进行使用
@@ -44,6 +43,7 @@
         {
           path: '/user/:id',
           component: User,
+          // 对象参数
           props: {
             uname: 'zx',
             age: 20,
