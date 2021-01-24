@@ -37,16 +37,16 @@
 
 
           <!-- 子路由的占位符 -->
-          <router-view />
+          <router-view ><router-view />
         </div>`
         }
 
         const Tab1 = {
-            template: '<h4>tab1 子组件</h4>'
+            template: '<h2>tab1 子组件</h2>'
         }
 
         const Tab2 = {
-            template: '<h4>tab2 子组件</h4>'
+            template: '<h2>tab2 子组件</h2>'
         }
 
         // 创建路由实例对象
