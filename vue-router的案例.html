@@ -197,6 +197,11 @@
                     ]
                 }
             },
+            methods: {
+                goDetail(id) {
+                    console.log(id);
+                }
+            },
             template: `
             <div>
                 <h3>用户管理</h3>
@@ -214,13 +219,19 @@
                     <td>{{item.id}}</td>
                     <td>{{item.name}}</td>
                     <td>{{item.age}}</td>
-                    <td><a href="javascript:;">详情</a></td>
+                    <td><a href="javascript:;" @click="goDetail(item.id)">详情</a></td>
                 </tr>
             </tbody>
         </table>
             </div>
             `
         };
+        const UserInfo = {
+            template: `
+        <div>
+        <h5>用户详情页</h5>
+        </div>`
+        }
         const Rights = {
             template: `
             <div>
@@ -258,6 +269,10 @@
                 children: [{
                         path: '/users',
                         component: Users
+                    },
+                    {
+                        path: '/userinfo',
+                        component: userinfo
                     },
                     {
                         path: '/rights',
