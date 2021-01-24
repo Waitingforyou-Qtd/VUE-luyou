@@ -27,6 +27,7 @@
 
   <script>
     const User = {
+      // TODO:路由组件中通过$route.params获取路由参数
       template: '<h1>User 组件 -- 用户id为: {{$route.params.ID}}</h1>'
     }
 
@@ -42,7 +43,7 @@
           redirect: '/user'
         },
         {
-          // TODO: :固定写法
+          // TODO: :固定写法,动态参数以:开头
           path: '/user/:ID',
           component: User
         },
