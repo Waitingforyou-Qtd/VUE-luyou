@@ -30,6 +30,7 @@
             <h1>User 组件 -- 用户id为: {{id}} -- 姓名为:{{uname}} -- 年龄为：{{age}}</h1>
             <button @click="goRegister">跳转到注册页面</button>
             </div>`,
+            // 为按钮绑定点击事件
             methods: {
                 goRegister() {
                     // 这种方式传参，通过 $route.query.name 接收
@@ -50,7 +51,7 @@
                     //         name: 'ifer'
                     //     }
                     // });
-                    
+
                     // name 跳转配合 params 传参，通过 $route.params.name 接收
                     // this.$router.push({
                     //     name: 'register',
@@ -78,16 +79,26 @@
         // 创建路由实例对象
         const router = new VueRouter({
             // 所有的路由规则
-            routes: [
-                { path: '/', redirect: '/user' },
+            routes: [{
+                    path: '/',
+                    redirect: '/user'
+                },
                 {
                     // 命名路由
                     name: 'user',
                     path: '/user/:id',
                     component: User,
-                    props: route => ({ uname: 'zs', age: 20, id: route.params.id })
+                    props: route => ({
+                        uname: 'zs',
+                        age: 20,
+                        id: route.params.id
+                    })
                 },
-                { path: '/register', name: 'register', component: Register }
+                {
+                    path: '/register',
+                    name: 'register',
+                    component: Register
+                }
             ]
         })
 
