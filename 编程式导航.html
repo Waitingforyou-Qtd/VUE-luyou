@@ -25,33 +25,33 @@
 
   <script>
     const User = {
-      props: ['id', 'uname', 'age'],
+      props: ['id', 'uname', 'age', 'tel'],
       template: `<div>
-            <h1>User 组件 -- 用户id为: {{id}} -- 姓名为:{{uname}} -- 年龄为：{{age}}</h1>
+            <h1>User 组件 -- 用户id为: {{id}} -- 姓名为:{{uname}} -- 年龄为：{{age}}-- 电话为：{{tel}}</h1>
             <button @click="goRegister">跳转到注册页面</button>
             </div>`,
       methods: {
         goRegister() {
-          // TODO:这种方式传参，通过 $route.query.name 接收
+          // TODO: 这种方式传参，通过 $route.query.name 接收
           // this.$router.push('/register?name=ifer');
 
           // 下面写法和上面功能一样
           // this.$router.push({
-          //     path: '/register',
-          //     query: {
-          //         name: 'ifer'
-          //     }
+          //   path: '/register',
+          //   query: {
+          //     name: 'ifer'
+          //   }
           // });
 
-          // TODO:name 配合 query 也可以做跳转并传参
-          this.$router.push({
-            name: 'register',
-            query: {
-              name: 'ifer'
-            }
-          });
+          // TODO: name 配合 query 也可以做跳转并传参
+          // this.$router.push({
+          //   name: 'register',
+          //   query: {
+          //     name: 'ifer'
+          //   }
+          // });
 
-          // TODO:name 跳转配合 params 传参，通过 $route.params.name 接收
+          // TODO: name 跳转配合 params 传参，通过 $route.params.name 接收
           // this.$router.push({
           //   name: 'register',
           //   params: {
@@ -89,6 +89,7 @@
           props: route => ({
             uname: 'zx',
             age: 20,
+            tel: 666666,
             id: route.params.id
           })
         },
