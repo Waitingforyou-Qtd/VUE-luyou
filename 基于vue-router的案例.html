@@ -163,10 +163,62 @@
             </div>
             `
     };
+
     const Users = {
+      data() {
+        return {
+          userlist: [{
+              id: 1,
+              name: '张三',
+              age: 18
+            },
+            {
+              id: 2,
+              name: '李四',
+              age: 45
+            },
+            {
+              id: 3,
+              name: '王五',
+              age: 33
+            },
+            {
+              id: 4,
+              name: '小二',
+              age: 30
+            }, {
+              id: 5,
+              name: '麻子',
+              age: 25
+            }, {
+              id: 6,
+              name: '周周',
+              age: 23
+            }
+          ]
+        }
+      },
       template: `
             <div>
                 <h3>用户管理</h3>
+                <table>
+            <thead>
+                <tr>
+                    <th>编号</th>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="item in userlist" :key="item.id">
+                    <td>{{item.id}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.age}}</td>
+                    <td><a href="javascript:;">详情</a></td>
+                </tr>
+            </tbody>
+        </table>
             </div>
             `
     };
