@@ -124,7 +124,7 @@
 <body>
   <!-- vue实例所控制区域 -->
   <div id="a">
-    <!-- 路由出口 -->
+    <!-- 路由出口/占位符 -->
     <router-view></router-view>
   </div>
   <script>
@@ -133,10 +133,10 @@
       template: `
             <div>
                 <!-- 头部区域 -->
-                <header class="header">***后台管理系统</header>
+                <header class="header">***后台管理系统***</header>
                 <!-- 中间主体区域 -->
                 <div class="main">
-                    <!-- 左侧菜单栏 -->
+                    <!-- 左侧菜单栏部分👇 -->
                     <div class="content left">
                         <ul>
                             <li>
@@ -156,6 +156,7 @@
                             </li>
                         </ul>
                     </div>
+                    <!-- 左侧菜单栏部分👆 -->
                     <!-- 右侧内容区域 -->
                     <div class="content right">
                         <div class="main-content">
