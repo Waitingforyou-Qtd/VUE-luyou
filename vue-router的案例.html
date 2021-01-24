@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>基于vue-router的案例</title>
+  <!-- CSS样式部分开始👇 -->
   <style>
     html,
     body,
@@ -19,7 +20,8 @@
       line-height: 50px;
       text-align: center;
       font-size: 24px;
-      color: #fff;
+      color: rgb(252, 10, 10);
+      font-weight: 900;
     }
 
     .footer {
@@ -93,7 +95,7 @@
       height: 45px;
       line-height: 45px;
       background-color: #a0a0a0;
-      color: #fff;
+      color: rgba(255, 255, 255, 0.671);
       cursor: pointer;
       border-bottom: 1px solid #fff;
     }
@@ -114,21 +116,24 @@
       background-color: #ddd;
     }
   </style>
+  <!-- CSS样式部分结束👆 -->
+  <script src="./lib/vue_2.5.22.js"></script>
+  <script src="./lib/vue-router_3.0.2.js"></script>
 </head>
 
 <body>
+  <!-- vue实例所控制区域 -->
   <div id="a">
     <!-- 路由出口 -->
     <router-view></router-view>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue-router@3.4.3/dist/vue-router.min.js"></script>
   <script>
+    // 定义根组件
     const App = {
       template: `
             <div>
                 <!-- 头部区域 -->
-                <header class="header">传智后台管理系统</header>
+                <header class="header">***后台管理系统</header>
                 <!-- 中间主体区域 -->
                 <div class="main">
                     <!-- 左侧菜单栏 -->
@@ -264,7 +269,7 @@
             </div>
             `
     };
-
+    // 创建路由对象
     const router = new VueRouter({
       routes: [{
         path: '/',
@@ -298,6 +303,7 @@
         ]
       }]
     });
+    // 创建实例对象
     new Vue({
       el: '#a',
       router
