@@ -273,6 +273,7 @@
     const router = new VueRouter({
       routes: [{
         path: '/',
+        // 根组件
         component: App,
         redirect: '/users',
         children: [{
@@ -306,6 +307,7 @@
     // 创建实例对象
     new Vue({
       el: '#a',
+      // 路由对象挂载到这里
       router
     });
   </script>
