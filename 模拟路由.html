@@ -19,6 +19,7 @@
         <a href="#/caijing">财经</a>
         <a href="#/yule">娱乐</a>
         <a href="#/meishi">美食</a>
+        <a href="#/tiyu">体育</a>
 
         <!-- 根据 TODO::is 属性指定的组件名称，把对应的组件渲染到 component 标签所在的位置 -->
         <!-- 可以把 component 标签当做是【组件的占位符】 -->
@@ -51,13 +52,18 @@
         const meishi = {
             template: '<h1>美食信息</h1>'
         }
+
+        // 体育组件
+        const tiyu = {
+            template: '<h1>体育信息</h1>'
+        }
         // #endregion
 
         // #region vue 实例对象
         const vm = new Vue({
             el: '#a',
             data: {
-                comName: 'keji'
+                comName: 'tiyu'
             },
             // 注册私有组件
             components: {
@@ -65,7 +71,8 @@
                 keji,
                 caijing,
                 yule,
-                meishi
+                meishi,
+                tiyu
             }
         })
         // #endregion
