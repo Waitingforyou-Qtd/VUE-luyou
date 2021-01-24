@@ -45,6 +45,7 @@
         {
           path: '/user/:id',
           component: User,
+          // TODO:如果想要获取传递的参数值还想要获取传递的对象数据，那么 props 应该设置为函数形式
           props: route => ({
             uname: 'xxx',
             age: 20,
