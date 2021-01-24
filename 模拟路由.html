@@ -12,12 +12,13 @@
 
 <body>
     <!-- 被 vue 实例控制的 div 区域 -->
-    <div id="app">
+    <div id="a">
         <!-- 切换组件的超链接 -->
         <a href="#/zhuye">主页</a>
         <a href="#/keji">科技</a>
         <a href="#/caijing">财经</a>
         <a href="#/yule">娱乐</a>
+        <a href="#/meishi">美食</a>
 
         <!-- 根据 TODO::is 属性指定的组件名称，把对应的组件渲染到 component 标签所在的位置 -->
         <!-- 可以把 component 标签当做是【组件的占位符】 -->
@@ -25,7 +26,7 @@
     </div>
 
     <script>
-        // #region 定义需要被切换的 4 个组件
+        // #region 定义需要被切换的 5 个组件
         // 主页组件
         const zhuye = {
             template: '<h1>主页信息</h1>'
@@ -45,11 +46,16 @@
         const yule = {
             template: '<h1>娱乐信息</h1>'
         }
+
+        // 美食组件
+        const meishi = {
+            template: '<h1>美食信息</h1>'
+        }
         // #endregion
 
         // #region vue 实例对象
         const vm = new Vue({
-            el: '#app',
+            el: '#a',
             data: {
                 comName: 'zhuye'
             },
@@ -58,7 +64,8 @@
                 zhuye,
                 keji,
                 caijing,
-                yule
+                yule,
+                meishi
             }
         })
         // #endregion
