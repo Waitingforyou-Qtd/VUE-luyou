@@ -97,7 +97,7 @@
       background-color: #a0a0a0;
       color: rgba(255, 255, 255, 0.671);
       cursor: pointer;
-      border-bottom: 1px solid #fff;
+      border-bottom: 1px solid rgb(3, 155, 3);
     }
 
     table {
@@ -173,32 +173,33 @@
     const Users = {
       data() {
         return {
+          // 返回一个数组
           userlist: [{
-              id: 1,
+              id: '①',
               name: '张三',
               age: 18
             },
             {
-              id: 2,
+              id: '②',
               name: '李四',
               age: 45
             },
             {
-              id: 3,
+              id: '③',
               name: '王五',
               age: 33
             },
             {
-              id: 4,
+              id: '④',
               name: '赵六',
               age: 30
             }, {
-              id: 5,
+              id: '⑤',
               name: '田七',
               age: 25
             }, {
-              id: 6,
-              name: '周周周',
+              id: '⑥',
+              name: '周周',
               age: 23
             },
           ]
@@ -271,6 +272,7 @@
             </div>
             `
     };
+    // TODO:创建左侧功能组件👆
     // 创建路由对象
     const router = new VueRouter({
       routes: [{
